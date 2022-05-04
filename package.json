@@ -1,0 +1,41 @@
+{
+  "name": "ts-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A typescript template.",
+  "license": "MIT",
+  "author": "Kingsley Chanakira",
+  "imports": {
+    "#root/*": "./dist/*.js",
+    "#lib/*": "./dist/lib/*.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc -b src",
+    "clean": "rimraf dist node_modules/.cache",
+    "dev": "npm run build && npm run start",
+    "lint": "eslint src tests --ext ts --fix",
+    "start": "node dist/index.js"
+  },
+  "prettier": "@sapphire/prettier-config",
+  "dependencies": {
+    "colorette": "^2.0.16",
+    "dotenv-defaults": "^5.0.0",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@sapphire/eslint-config": "^4.3.4",
+    "@sapphire/prettier-config": "^1.4.3",
+    "@sapphire/ts-config": "^3.3.4",
+    "@types/dotenv-defaults": "^2.0.1",
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}
