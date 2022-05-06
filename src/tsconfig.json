@@ -6,7 +6,6 @@
 		"outDir": "../dist",
 		"tsBuildInfoFile": "../dist/.tsbuildinfo",
 		"composite": true,
-		"preserveConstEnums": true,
 		"paths": {
 			"#root/*": ["*"],
 			"#lib/*": ["lib/*"]
